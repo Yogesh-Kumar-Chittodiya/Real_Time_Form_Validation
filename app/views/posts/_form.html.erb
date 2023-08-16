@@ -1,0 +1,15 @@
+
+<%= form_with model: post do |form| %>
+    <div class="field mb-4 input-group">
+        <%=form.label :title%>&nbsp;&nbsp;&nbsp;
+        <%= form.text_field :title%>
+    </div>
+    <div class="mb-1 input-group">
+        <%=form.label :body%>&nbsp;&nbsp;
+        <%= form.text_area :body%>
+    </div>
+    <div class="mt-4 mx-4">
+        <%= form.submit class: 'btn btn-primary rounded-0 mx-2' %>
+        <%= link_to "Back", :back, class: 'btn btn-outline-primary rounded-0 mx-2' %>
+    </div>
+<%end%>

@@ -1,0 +1,25 @@
+<!--<h1>Enter New Post</h1>-->
+
+<%#= render 'design' %>
+
+<%#= render 'form', post: @post %>
+
+
+<div class="col-12">
+    <h1 class="text-center">Enter New Post</h1>
+    
+    <div class="col-10 mx-auto m-4 ">
+        <%= render 'design' %>
+
+        <div class="col-3 mx-auto" style="position:relative; top:16vh;" onclick="chang()">
+            <%= render 'form', post: @post %>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:-40vh; height:15vh;">
+    <% if @post.errors.any?  %>
+            <p class="text-center text-danger"><%= @post.errors.full_messages %></p>
+    <%end%>
+</div>
+

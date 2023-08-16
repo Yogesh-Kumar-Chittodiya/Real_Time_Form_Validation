@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RealTimeFormValidation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "show.js" %>
+
+    
+    
+  </head>
+
+  <body>
+    <%= render 'header' %>
+    <p class="notice"><%= notice %></p>
+    <%= yield %>
+    <%= render 'footer' %>
+    <script>
+      function chang(){
+        const data = document.getElementById("data");
+        data.style.color="green";
+        
+        const ring1 =document.getElementById("1")
+        const ring2 =document.getElementById("2");
+        const ring3 =document.getElementById("3");
+
+        ring1.style.borderColor="red";
+        ring2.style.borderColor="blue";
+        // ring3.style.borderColor="orange";
+    }
+
+</script>
+  </body>
+</html>
